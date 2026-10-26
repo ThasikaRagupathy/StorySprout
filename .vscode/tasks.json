@@ -1,0 +1,59 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "StorySprout: dev",
+			"type": "shell",
+			"command": "npm run dev",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "StorySprout: build",
+			"type": "shell",
+			"command": "npm run build",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "StorySprout: lint",
+			"type": "shell",
+			"command": "npm run lint",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "StorySprout final checks",
+			"type": "shell",
+			"command": "Set-Location 'd:\\StorySprout'; npm run lint; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm run build; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; if (Test-Path 'd:\\storysprout-temp') { Remove-Item -Recurse -Force 'd:\\storysprout-temp' }; if (Test-Path 'd:\\storysprout-probe.txt') { Remove-Item -Force 'd:\\storysprout-probe.txt' }",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "StorySprout build verify",
+			"type": "shell",
+			"command": "cd /d D:\\StorySprout && npm run build",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "StorySprout build verify 2",
+			"type": "shell",
+			"command": "Set-Location 'D:\\StorySprout'; npm run build; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

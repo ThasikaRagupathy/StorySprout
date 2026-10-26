@@ -1,0 +1,295 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --warm-cream: #FFF7E8;
+  --forest-green: #6FA887;
+  --forest-dark: #345B45;
+  --mint: #A9D9B8;
+  --peach: #F4B9B1;
+  --lilac: #B9B4E8;
+  --golden: #F5D778;
+  --dark-brown: #63452E;
+  --font-fredoka: var(--font-fredoka), "Fredoka", "Nunito", cursive, sans-serif;
+  --font-nunito: var(--font-nunito), "Nunito", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  color: var(--dark-brown);
+  background-color: var(--warm-cream);
+  background-image: 
+    radial-gradient(ellipse at 85% 8%, rgba(245, 215, 120, 0.28) 0%, transparent 40rem),
+    radial-gradient(ellipse at 15% 92%, rgba(169, 217, 184, 0.25) 0%, transparent 45rem),
+    radial-gradient(circle at 50% 50%, #FFFDF8 0%, #FFF7E8 100%);
+  font-family: var(--font-nunito), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+.font-fredoka {
+  font-family: var(--font-fredoka), cursive, sans-serif;
+}
+
+.font-nunito {
+  font-family: var(--font-nunito), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-fredoka), cursive, sans-serif;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+/* ========================================================
+   1. CHUNKY 3D TACTILE STORYBOOK BUTTONS (EYE-CATCHING)
+======================================================== */
+
+.btn-chunky-green {
+  background: linear-gradient(180deg, #7BB794 0%, #5D9875 100%);
+  color: #FFFFFF;
+  border: 2px solid #4C8262;
+  box-shadow: 0 5px 0 #3A684D, 0 10px 18px rgba(52, 91, 69, 0.22), inset 0 2px 0 rgba(255, 255, 255, 0.4);
+  border-radius: 9999px;
+  font-family: var(--font-fredoka);
+  font-weight: 700;
+  transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-shadow: 0 1px 2px rgba(50, 80, 60, 0.4);
+}
+.btn-chunky-green:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #3A684D, 0 14px 22px rgba(52, 91, 69, 0.26), inset 0 2px 0 rgba(255, 255, 255, 0.5);
+}
+.btn-chunky-green:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #3A684D, 0 5px 10px rgba(52, 91, 69, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-chunky-orange {
+  background: linear-gradient(180deg, #F0825B 0%, #D8633B 100%);
+  color: #FFFFFF;
+  border: 2px solid #BA4C28;
+  box-shadow: 0 5px 0 #9E3A19, 0 10px 18px rgba(186, 76, 40, 0.25), inset 0 2px 0 rgba(255, 255, 255, 0.4);
+  border-radius: 9999px;
+  font-family: var(--font-fredoka);
+  font-weight: 700;
+  transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-shadow: 0 1px 2px rgba(120, 40, 20, 0.4);
+}
+.btn-chunky-orange:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #9E3A19, 0 14px 22px rgba(186, 76, 40, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.5);
+}
+.btn-chunky-orange:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #9E3A19, 0 5px 10px rgba(186, 76, 40, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-chunky-yellow {
+  background: linear-gradient(180deg, #FCE38E 0%, #EFC95B 100%);
+  color: #63452E;
+  border: 2px solid #DDB038;
+  box-shadow: 0 5px 0 #B88E24, 0 10px 18px rgba(184, 142, 36, 0.22), inset 0 2px 0 rgba(255, 255, 255, 0.6);
+  border-radius: 9999px;
+  font-family: var(--font-fredoka);
+  font-weight: 700;
+  transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.btn-chunky-yellow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #B88E24, 0 14px 22px rgba(184, 142, 36, 0.26), inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+.btn-chunky-yellow:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #B88E24, 0 5px 10px rgba(184, 142, 36, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-chunky-white {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8F4E8 100%);
+  color: #63452E;
+  border: 2px solid #E5DFCD;
+  box-shadow: 0 5px 0 #D4CBBA, 0 10px 18px rgba(99, 69, 46, 0.08), inset 0 2px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 9999px;
+  font-family: var(--font-fredoka);
+  font-weight: 700;
+  transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.btn-chunky-white:hover {
+  transform: translateY(-2px);
+  border-color: #6FA887;
+  box-shadow: 0 7px 0 #C4BAA6, 0 14px 22px rgba(99, 69, 46, 0.12);
+}
+.btn-chunky-white:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #D4CBBA, 0 5px 10px rgba(99, 69, 46, 0.06);
+}
+
+/* ========================================================
+   2. WHIMSICAL STORYBOOK TEXTURES & EFFECTS
+======================================================== */
+
+/* Tactile Parchment Paper Texture */
+.parchment-paper {
+  background-color: #FFFDF8;
+  background-image: 
+    radial-gradient(#F5D778 0.9px, transparent 0.9px),
+    radial-gradient(#6FA887 0.6px, #FFFDF8 0.6px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* Storybook Gold Foil Gradient */
+.gold-foil-text {
+  background: linear-gradient(135deg, #B58422 0%, #F5D778 40%, #FFEFA8 60%, #C49226 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(181, 132, 34, 0.2));
+}
+
+/* Shiny Gold Badge */
+.gold-badge {
+  background: linear-gradient(135deg, #FDF4D4 0%, #F8DE82 50%, #EFBE45 100%);
+  border: 1.5px solid #D8A527;
+  box-shadow: 0 3px 6px rgba(184, 142, 36, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  color: #573B18;
+}
+
+/* Storybook Ribbon Bookmark */
+.ribbon-bookmark {
+  position: absolute;
+  top: -6px;
+  right: 28px;
+  width: 30px;
+  height: 56px;
+  background: linear-gradient(180deg, #E76F42 0%, #C4552D 100%);
+  box-shadow: 0 5px 8px -1px rgba(99, 69, 46, 0.35);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 82%, 0% 100%);
+  z-index: 25;
+}
+
+/* Illuminated Storybook Drop-Cap */
+.storybook-dropcap::first-letter {
+  float: left;
+  font-family: var(--font-fredoka);
+  font-size: 3.1em;
+  line-height: 0.8;
+  padding: 6px 10px 0 0;
+  color: #6FA887;
+  font-weight: 800;
+  text-shadow: 2px 2px 0px #A9D9B8, 0 3px 6px rgba(52, 91, 69, 0.15);
+}
+
+/* Wooden Nursery Shelf */
+.wooden-shelf {
+  background: linear-gradient(180deg, #E2BD8A 0%, #C8995C 40%, #A8783E 100%);
+  border-radius: 8px 8px 18px 18px;
+  box-shadow: 0 10px 22px rgba(99, 69, 46, 0.32), inset 0 3px 0 rgba(255, 255, 255, 0.4);
+  border-bottom: 3px solid #784E20;
+}
+
+/* Storybook Cards with Embossed 3D Spine and Hover Lift */
+.storybook-card-hover {
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 20px -4px rgba(99, 69, 46, 0.1), 0 0 0 1px rgba(229, 223, 205, 0.6);
+}
+.storybook-card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 24px 38px -8px rgba(99, 69, 46, 0.22), 0 0 0 3px #F5D778;
+}
+
+/* Book reader 3D Spine Depth */
+.book-spine-gradient {
+  background: linear-gradient(
+    to right, 
+    rgba(99, 69, 46, 0.22) 0%, 
+    rgba(99, 69, 46, 0.05) 35%, 
+    rgba(255, 255, 255, 0.25) 50%, 
+    rgba(99, 69, 46, 0.05) 65%, 
+    rgba(99, 69, 46, 0.22) 100%
+  );
+}
+
+/* ========================================================
+   3. ANIMATED SPARKLE & GLOW KEYFRAMES
+======================================================== */
+
+@keyframes gentle-sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(4deg); }
+}
+.animate-sway {
+  animation: gentle-sway 4s ease-in-out infinite;
+}
+
+@keyframes magical-float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-8px) scale(1.04); }
+}
+.animate-float {
+  animation: magical-float 3s ease-in-out infinite;
+}
+
+@keyframes soft-pulse-glow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.15); }
+}
+.animate-glow {
+  animation: soft-pulse-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes rainbow-border-glow {
+  0% { box-shadow: 0 0 15px rgba(245, 215, 120, 0.7); }
+  33% { box-shadow: 0 0 18px rgba(169, 217, 184, 0.7); }
+  66% { box-shadow: 0 0 18px rgba(244, 185, 177, 0.7); }
+  100% { box-shadow: 0 0 15px rgba(245, 215, 120, 0.7); }
+}
+.active-friend-card {
+  animation: rainbow-border-glow 3s infinite ease-in-out;
+}
+
+/* ========================================================
+   4. ACCESSIBILITY & MOTION OVERRIDES
+======================================================== */
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+[tabindex="-1"]:focus-visible {
+  outline: 3.5px solid #6FA887;
+  outline-offset: 3.5px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+::selection {
+  color: #63452E;
+  background: #F5D778;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
